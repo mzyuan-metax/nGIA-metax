@@ -3,7 +3,6 @@
 // 修改或优化函数后一定要与ok的函数比对结果
 
 #include <CL/sycl.hpp>
-#include <dpct/dpct.hpp>
 #include <iostream> // cout
 #include <fstream>  // fstream
 #include <vector>  // vector
