@@ -87,13 +87,13 @@ void readIndex(Option &option, Index &index) {
       if (similarity < 0.75f) option.precise = 1;  // 相似度低 精确模式
       option.wordLength = std::max(4, option.wordLength);
       option.wordLength = std::min(8, option.wordLength);
-      if (similarity < 0.87f) option.wordLength =
+      if (similarity < 0.88f) option.wordLength =
           std::min(7, option.wordLength);
-      if (similarity < 0.85f) option.wordLength =
+      if (similarity < 0.86f) option.wordLength =
           std::min(6, option.wordLength);
-      if (similarity < 0.83f) option.wordLength =
+      if (similarity < 0.84f) option.wordLength =
           std::min(5, option.wordLength);
-      if (similarity < 0.80f) option.wordLength =
+      if (similarity < 0.81f) option.wordLength =
           std::min(4, option.wordLength);
     } else {  // 蛋白序列
       if (similarity < 0.5f) option.precise = 1;  // 相似度低 精确模式
