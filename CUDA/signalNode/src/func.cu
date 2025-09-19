@@ -464,8 +464,10 @@ unsigned int *represent, int *jobs, int jobCount, float similarity) {
     int netLen322 = (netLength2+31)/32;  // 净32补齐
     unsigned int *packed2 = bufBegin+6;  // 打包数据
     // 准备中间数据 1是行2是列
-    unsigned int line[2048];  // 保存结果 二进制 2048=65536/32
-    memset(line, 0xFF, 2048*sizeof(unsigned int));  // 0:匹配 1:不匹配
+    // unsigned int line[2048];  // 保存结果 二进制 2048=65536/32
+    // memset(line, 0xFF, 2048*sizeof(unsigned int));  // 0:匹配 1:不匹配
+    unsigned int line[512];  // 保存结果 二进制 2048=65536/32
+    memset(line, 0xFF, 512*sizeof(unsigned int));  // 0:匹配 1:不匹配
     int shift = ceil((float)length1-(float)length2*similarity);  // 偏移量
     shift = (shift+31)/32;  // 偏移块数
     int cols = 32;  // 竖向计算行数
@@ -535,8 +537,10 @@ unsigned int *represent, int *jobs, int jobCount, float similarity) {
     int netLen322 = (netLength2+31)/32;  // 净32补齐
     unsigned int *packed2 = bufBegin+30;  // 打包数据
     // 准备中间数据 1是行2是列
-    unsigned int line[2048];  // 保存结果 二进制 2048=65536/32
-    memset(line, 0xFF, 2048*sizeof(unsigned int));  // 0:匹配 1:不匹配
+    // unsigned int line[2048];  // 保存结果 二进制 2048=65536/32
+    // memset(line, 0xFF, 2048*sizeof(unsigned int));  // 0:匹配 1:不匹配
+    unsigned int line[512];  // 保存结果 二进制 2048=65536/32
+    memset(line, 0xFF, 512*sizeof(unsigned int));  // 0:匹配 1:不匹配
     int shift = ceil((float)length1-(float)length2*similarity);  // 偏移量
     shift = (shift+31)/32;  // 偏移块数
     int cols = 32;  // 竖向计算行数

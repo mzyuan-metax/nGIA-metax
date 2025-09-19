@@ -1,3 +1,8 @@
+# BUILD ON HPCC
+
+Please see [BUILD_HPCC.md](BUILD_HPCC.md)
+
+---
 # nGIA序列聚类(去冗余)工具套件  
 ## 介绍  
 采用贪婪增量算法的序列聚类(去冗余)工具套件，当前唯一可以进行序列精确聚类的工具，也是速度最快的(用多节点)。  
